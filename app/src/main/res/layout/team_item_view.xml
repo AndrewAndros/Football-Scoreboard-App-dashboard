@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:id="@+id/team_image"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Team"
+            android:textAllCaps="true"
+            android:layout_marginStart="20dp"
+            android:textSize="14sp"
+            android:id="@+id/team_title"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:gravity="center"
+            android:text="10"
+            android:layout_marginStart="20dp"
+            android:textSize="16sp"
+            android:id="@+id/team_played"/>
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:gravity="center"
+            android:text="7/2/1"
+            android:layout_marginStart="20dp"
+            android:textSize="16sp"
+            android:id="@+id/team_outcomes"/>
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:gravity="center"
+            android:text="18-27"
+            android:layout_marginStart="20dp"
+            android:textSize="16sp"
+            android:id="@+id/team_goalsDifference"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="0"
+            android:layout_marginStart="20dp"
+            android:textSize="18sp"
+            android:id="@+id/team_points"/>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

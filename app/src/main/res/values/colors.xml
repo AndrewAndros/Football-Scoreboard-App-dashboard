@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF8822</color>
+    <color name="colorPrimaryDark">#EE6611</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBackground">#212121</color>
+    <color name="colorImportantText">#E53935</color>
+    <color name="colorProgress">#c32522</color>
+    <color name="colorUsualText">#FFFFFF</color>
+    <color name="colorWhiteDark">#F8F8F8</color>
+
+    <!-- In res/values/colors.xml -->
+    <color name="dark_blue">#180065</color>
+    <color name="light_blue">#334ee9ff</color>
+    <color name="medium_green">#3d853e</color>
+    <color name="light_green">#3c2ae668</color>
+</resources>

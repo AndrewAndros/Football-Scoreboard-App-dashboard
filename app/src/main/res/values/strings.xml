@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dashboard</string>
+    <string name="placeholder">%</string>
+    <string name="father">Father</string>
+    <string name="eugene">Eugene</string>
+
+    <!-- The class name to the ScrollingChildBehavior required for AppBarLayout -->
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+</resources>
