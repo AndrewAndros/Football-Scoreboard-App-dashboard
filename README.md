@@ -5,7 +5,7 @@
 **Использованно:** 
 * Java 
 * Room, LiveData, ViewModel, RxJava
-* RecyclerView, Fragments, базовая анимация 
+* RecyclerView, Fragments, Glide, базовая анимация 
 * MediaPlayer
 -------------------------------------------------------------------------------------------------------------------------------------
 
@@ -14,5 +14,5 @@
 **Applied:** 
 * Java 
 * Room, LiveData, ViewModel, RxJava
-* RecyclerView, Fragments, basic animation
+* RecyclerView, Fragments, Glide, basic animation
 * MediaPlayer
