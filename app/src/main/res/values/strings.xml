@@ -1,10 +1,15 @@
 <resources>
-    <string name="app_name">Dashboard</string>
+    <string name="app_name">Scoreboard</string>
     <string name="placeholder">%</string>
-    <string name="father">Father</string>
-    <string name="eugene">Eugene</string>
+
 
     <!-- The class name to the ScrollingChildBehavior required for AppBarLayout -->
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="exit_title">Выход</string>
+    <string name="exit_explanation">Игра активна, прервать её и выйти?</string>
+    <string name="exit_confirmation">ДА</string>
+    <string name="exit_cancel">НЕТ</string>
+    <string name="different_teams_requirement">Команды должны быть разными</string>
+    <string name="time_is_over">игра оконченна</string>
 
 </resources>

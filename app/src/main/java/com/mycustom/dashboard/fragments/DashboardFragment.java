@@ -40,7 +40,7 @@ import static com.mycustom.dashboard.utils.Constants.CLICK;
 import static com.mycustom.dashboard.utils.Constants.GOAL;
 import static com.mycustom.dashboard.utils.Constants.KICK;
 import static com.mycustom.dashboard.utils.Constants.WHISTLE;
-
+import static com.mycustom.dashboard.utils.Constants.WRONG;
 
 
 public class DashboardFragment extends Fragment implements View.OnClickListener {
@@ -129,7 +129,8 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
             view.findViewById(id).setOnClickListener(this);
         }
 
-        mViewModel.getTeamsLoadingStatus().observe(getActivity(), new Observer<Boolean>() {
+        mViewModel.getTeamsLoadingStatus().removeObservers(getViewLifecycleOwner());
+        mViewModel.getTeamsLoadingStatus().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
             @Override
             public void onChanged(@Nullable Boolean status) {
                 if (status != null && status) {
@@ -308,7 +309,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
             public void onFinish() {
                 makeSoundEffect(WHISTLE);
                 mViewModel.gameOnRun = false;
-                timeView.setText("time is over");
+                timeView.setText(getString(R.string.time_is_over));
                 logResults();
                 mViewModel.scoreTeamHost = 0;
                 mViewModel.scoreTeamRival = 0;
@@ -320,14 +321,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         };
         mViewModel.timer.start();
 
-//        mViewModel.getForceGameToStop().observe(this, new Observer<Boolean>() {
-//            @Override
-//            public void onChanged(@Nullable Boolean aBoolean) {
-//                if (aBoolean != null && aBoolean) {
-//
-//                }
-//            }
-//        });
+
     }
 
     private void commandResetUI() {
@@ -363,6 +357,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         displayScores(mViewModel.scoreTeamHost, mViewModel.scoreTeamRival);
         getView().findViewById(R.id.buttonPlay).setVisibility(View.VISIBLE);
         getView().findViewById(R.id.timeLeft).setVisibility(View.GONE);
+        timeForGameView.setVisibility(View.VISIBLE);
     }
 
 
@@ -413,7 +408,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
     private boolean teamsAreTheSameCheck() {
         if (mViewModel.hostTeamIndex == mViewModel.rivalTeamIndex) {
-            Toast.makeText(getActivity(), "Команды должны быть разными", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), getString(R.string.different_teams_requirement), Toast.LENGTH_LONG).show();
             makeSoundEffect(Constants.WRONG);
             return true;
         }
@@ -437,19 +432,19 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
             return;
         }
         switch (nameOfSound) {
-            case "click":
+            case CLICK:
                 mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.click);
                 break;
-            case "wrong":
+            case WRONG:
                 mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.wrong);
                 break;
-            case "whistle":
+            case WHISTLE:
                 mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.whistle);
                 break;
-            case "kick":
+            case KICK:
                 mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.kick);
                 break;
-            case "goal":
+            case GOAL:
                 mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.goal);
                 break;
         }

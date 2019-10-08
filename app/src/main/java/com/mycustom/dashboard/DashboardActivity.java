@@ -96,9 +96,9 @@ public class DashboardActivity extends AppCompatActivity  {
 
     private void userWantToExit() {
         AlertDialog alertDialog = new AlertDialog.Builder(DashboardActivity.this).create();
-        alertDialog.setTitle("Выход");
-        alertDialog.setMessage("Игра активна, прервать её и выйти?");
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "ДА",
+        alertDialog.setTitle(getString(R.string.exit_title));
+        alertDialog.setMessage(getString(R.string.exit_explanation));
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.exit_confirmation),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         mViewModel.exitCommanded = true;
@@ -113,7 +113,7 @@ public class DashboardActivity extends AppCompatActivity  {
                         onBackPressed();
                     }
                 });
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "НЕТ",
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.exit_cancel),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();

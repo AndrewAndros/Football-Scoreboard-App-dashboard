@@ -70,7 +70,8 @@ public class ScoreViewModel extends AndroidViewModel {
     public int rivalTeamIndex = 0;
 
     // How long next game will last (5 options for user)
-    public int timeForGameSelection = 0;
+    // Current one is 5 minutes, index 0 for testing, it lasts 20 sec
+    public int timeForGameSelection = 1;
     public long[] timeOptions = new long[5];
 
     // Called when a match is interrupted by user

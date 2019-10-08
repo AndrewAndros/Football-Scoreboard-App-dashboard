@@ -37,7 +37,8 @@ public class TableFragment extends Fragment {
     }
 
     private void subscribeObservers() {
-        mViewModel.getTeams().observe(this, new Observer<List<Team>>() {
+        mViewModel.getTeams().removeObservers(getViewLifecycleOwner());
+        mViewModel.getTeams().observe(getViewLifecycleOwner(), new Observer<List<Team>>() {
             @Override
             public void onChanged(@Nullable List<Team> teams) {
                 mAdapter.setTeams(mViewModel.teams.getValue());

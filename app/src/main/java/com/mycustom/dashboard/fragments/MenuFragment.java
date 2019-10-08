@@ -31,6 +31,8 @@ public class MenuFragment extends Fragment {
         return view;
     }
 
+
+
     @Override
     public void onStart() {
         super.onStart();
@@ -46,7 +48,7 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 ((DashboardActivity) getActivity()).setViewPager(2);
-                getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);
             }
         });
 
@@ -54,7 +56,7 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 ((DashboardActivity) getActivity()).setViewPager(3);
-                getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);
             }
         });
     }

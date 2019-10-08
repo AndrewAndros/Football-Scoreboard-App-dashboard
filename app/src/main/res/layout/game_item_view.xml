@@ -15,14 +15,14 @@
 
 
         <TextView
-            android:layout_weight="1.5"
+            android:layout_weight="1.8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:gravity="center"
             android:text="Team"
             android:textAllCaps="true"
-            android:textSize="14sp"
+            android:textSize="11sp"
             android:id="@+id/team_host_name"/>
 
         <ImageView
@@ -77,7 +77,7 @@
             android:src="@drawable/ic_launcher_background" />
 
         <TextView
-            android:layout_weight="1.6"
+            android:layout_weight="1.8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textColor="#000"
@@ -85,7 +85,7 @@
             android:gravity="center"
             android:text="TEAM"
             android:layout_marginStart="7dp"
-            android:textSize="14sp"
+            android:textSize="11sp"
             android:id="@+id/team_guest_name"/>
 
 
