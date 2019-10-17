@@ -21,6 +21,6 @@ public interface GamesDao {
     @Delete
     void deleteTheResults(Game game);
 
-    @Query("SELECT * FROM game ORDER BY gameId ASC")
+    @Query("SELECT * FROM games ORDER BY gameId ASC")
     List<Game> getAllGamesList();
 }

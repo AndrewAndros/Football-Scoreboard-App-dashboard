@@ -5,7 +5,7 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-@Entity
+@Entity (tableName = "teams")
 public class Team implements Comparable<Team> {
 
     @PrimaryKey

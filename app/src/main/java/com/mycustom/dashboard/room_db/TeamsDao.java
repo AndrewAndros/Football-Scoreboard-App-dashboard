@@ -24,10 +24,10 @@ public interface TeamsDao {
     @Delete
     void deleteTheTeam(Team team);
 
-    @Query("SELECT * FROM team")
+    @Query("SELECT * FROM teams")
     List<Team> getAllTeams();
 
-    @Query("UPDATE team SET played = :played, won = :won, drawn = :drawn, lost = :lost, GF = :GF, GA = :GA, points = :points WHERE name = :name ")
+    @Query("UPDATE teams SET played = :played, won = :won, drawn = :drawn, lost = :lost, GF = :GF, GA = :GA, points = :points WHERE name = :name ")
     void updateTeamResults(String name, int played, int won, int drawn, int lost, int GF, int GA, int points);
 
 }
